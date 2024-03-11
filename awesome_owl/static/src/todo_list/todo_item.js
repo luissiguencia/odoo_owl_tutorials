@@ -9,4 +9,10 @@ export class TodoItem extends Component {
     onChange() {
         this.props.toggleState(this.props.todo.id);
     }
+
+    onClick() {
+        this.props.removeTodo(this.props.todo.id);
+    }
+
+
 }

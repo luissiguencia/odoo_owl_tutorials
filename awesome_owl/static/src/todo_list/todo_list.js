@@ -28,10 +28,18 @@ export class TodoList extends Component {
         }
     }
 
+    //Cambia de estado a la tarea
     toggleState(id) {
         const todo = this.todos.find((todo) => todo.id == id)
         if (todo) {
             todo.isCompleted = !todo.isCompleted;
+        }
+    }
+
+    removeTodo(id) {
+        const todo = this.todos.find((todo) => todo.id == id)
+        if (todo) {
+            this.todos.splice(todo, 1);
         }
     }
 
