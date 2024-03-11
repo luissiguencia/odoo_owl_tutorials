@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_owl.playground">
+        <div class="row">
+            <h3>Exercise 1</h3>
+            <div class="col-2">
+                Hello World
+            </div>
+            <div class="col-2">
+                <Counter onChange.bind="incrementSum"/>
+            </div>
+            <div class="col-2">
+                <Counter onChange.bind="incrementSum"/>
+            </div>
+            <div class="col-4">
+                <br></br> 
+                La suma total es: <t t-esc="sum.value"/>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Exercise 2</h3>
+            <Card title="'Titulo 1'" content="this.html1" />
+            <Card title="'Titulo 2'" content="this.html2" />
+            <Card title="'Titulo 3'" content="'Contenido 3'" />
+        </div>
+        <h3>Exercise 3</h3>
+        <div class="row">
+            <TodoList/>
+        </div>
+    </t>
+
+</templates>

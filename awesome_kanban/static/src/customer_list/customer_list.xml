@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="awesome_owl.customer_list">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </t>
+</templates>
