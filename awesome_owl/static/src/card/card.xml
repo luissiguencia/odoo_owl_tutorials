@@ -6,9 +6,14 @@
                 <h5 class="card-title">
                     <t t-esc="props.title"/>
                 </h5>
-                <p class="card-text text-primary">
-                    <b><t t-slot="default"/></b>
-                </p>
+                <span class="fa fa-remove" style="text-color:red;margin-left:5px;" t-on-click="toogle_show_content"/>
+                <t t-if="state.show">
+                    <p class="card-text text-primary">
+                        <b>
+                            <t t-slot="default"/>
+                        </b>
+                    </p>
+                </t>
             </div>
         </div>
     </t>

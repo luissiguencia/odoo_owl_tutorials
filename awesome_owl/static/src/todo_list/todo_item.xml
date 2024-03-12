@@ -4,7 +4,7 @@
         <li t-att-class="props.todo.isCompleted ? 'text-decoration-line-through text-muted' : ''">
             <input type="checkbox" t-att-checked="props.todo.isCompleted" t-on-change="onChange"/> 
             <t t-esc="props.todo.id"/>-<t t-esc="props.todo.description"/>
-            <span class="fa fa-remove" style="text-color:red;margin-left:5px;" t-on-click="onClick"/>
+            <span class="fa fa-remove" style="text-color:red;margin-left:5px;" t-on-click="toogle_show_content()"/>
         </li>
     </t>
 </templates>
