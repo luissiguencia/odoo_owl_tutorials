@@ -20,9 +20,15 @@
         </div>
         <div class="row">
             <h3>Exercise 2</h3>
-            <Card title="'Titulo 1'" content="this.html1" />
+            <Card title="'Titulo 1'">
+                <Counter/>
+            </Card>
             <Card title="'Titulo 2'" content="this.html2" />
-            <Card title="'Titulo 3'" content="'Contenido 3'" />
+            <Card title="'Titulo 3'">
+               
+                    Saludos Hola Mundos
+               
+            </Card>
         </div>
         <h3>Exercise 3</h3>
         <div class="row">
