@@ -12,7 +12,7 @@
                     <div class="text-center">
                         <p>Número de nuevos pedidos este mes</p>
                         <h2>
-                            <t t-out="data.nb_new_orders"/>
+                            <t t-out="statistics.nb_new_orders"/>
                         </h2>
                     </div>
                 </DashboardItem>
@@ -20,7 +20,7 @@
                     <div class="text-center">
                         <p>Número de pedidos cancelados de este mes</p>
                         <h2>
-                            <t t-out="data.nb_cancelled_orders"/>
+                            <t t-out="statistics.nb_cancelled_orders"/>
                         </h2>
                     </div>
                 </DashboardItem>
@@ -28,7 +28,7 @@
                     <div class="text-center">
                         <p>Número de asientos contables</p>
                         <h2>
-                            <t t-out="data.count"/>
+                            <t t-out="statistics.count"/>
                         </h2>
                     </div>
                 </DashboardItem>
