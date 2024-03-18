@@ -12,10 +12,31 @@ class AwesomeDashboard extends Component {
     }
 
     setup() {
-        this.myService = useService("myService");
+        //this.myService = useService("myService");
         // do something with value
-     }
-    
+        this.action = useService("action");
+        this.display = {
+            controlPanel: {},
+        };
+    }
+
+    openCustomers() {
+        this.action.doAction("base.action_partner_form")
+    }
+
+    openLeads() {
+        this.action.doAction({
+            type: 'ir.actions.act_window',
+            name: 'List All Leads',
+            target: 'current',
+            res_model: 'crm.lead',
+            views: [
+                [false, 'form'],
+                [false, 'list'],
+            ],
+        });
+    }
+
 }
 
 registry.category("actions").add("awesome_dashboard.dashboard", AwesomeDashboard);
