@@ -5,12 +5,14 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { useService } from "@web/core/utils/hooks";
 import { DashboardItem } from "./dashboard_item/dashboard_item";
+import { PieChartCard } from "./pie_chart_card/pie_chart_card";
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
     static components = {
         Layout,
-        DashboardItem
+        DashboardItem,
+        PieChartCard
     }
 
     setup() {
