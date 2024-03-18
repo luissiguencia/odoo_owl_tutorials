@@ -8,6 +8,7 @@ from odoo.http import request
 
 logger = logging.getLogger(__name__)
 
+
 class AwesomeDashboard(http.Controller):
     @http.route('/awesome_dashboard/statistics', type='json', auth='user')
     def get_statistics(self):
@@ -21,8 +22,11 @@ class AwesomeDashboard(http.Controller):
             'total_amount': the total amount of orders, this month
         """
 
+        count = request.env['account.move'].search_count([])
+
         return {
             'average_quantity': random.randint(4, 12),
+            'count': count,
             'average_time': random.randint(4, 123),
             'nb_cancelled_orders': random.randint(0, 50),
             'nb_new_orders': random.randint(10, 200),
@@ -33,4 +37,3 @@ class AwesomeDashboard(http.Controller):
             },
             'total_amount': random.randint(100, 1000)
         }
-

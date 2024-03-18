@@ -9,13 +9,28 @@
             </t>
             <div class="d-flex flex-wrap">
                 <DashboardItem >
-                    Pruebas
+                    <div class="text-center">
+                        <p>Número de nuevos pedidos este mes</p>
+                        <h2>
+                            <t t-out="data.nb_new_orders"/>
+                        </h2>
+                    </div>
                 </DashboardItem>
                 <DashboardItem size="2">
-                    Hola mundo
+                    <div class="text-center">
+                        <p>Número de pedidos cancelados de este mes</p>
+                        <h2>
+                            <t t-out="data.nb_cancelled_orders"/>
+                        </h2>
+                    </div>
                 </DashboardItem>
                 <DashboardItem >
-                    Saludos
+                    <div class="text-center">
+                        <p>Número de asientos contables</p>
+                        <h2>
+                            <t t-out="data.count"/>
+                        </h2>
+                    </div>
                 </DashboardItem>
             </div>
         </Layout>

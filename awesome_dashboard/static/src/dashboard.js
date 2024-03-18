@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component } from "@odoo/owl";
+import { Component, onWillStart, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { useService } from "@web/core/utils/hooks";
@@ -20,6 +20,14 @@ class AwesomeDashboard extends Component {
         this.display = {
             controlPanel: {},
         };
+        this.rpc = useService("rpc");
+        this.data = useState({});
+        onWillStart(async () => {
+            const result = await this.rpc("/awesome_dashboard/statistics");
+            console.log(result);
+            this.data = result
+        })
+
     }
 
     openCustomers() {
